@@ -1,6 +1,6 @@
 # Octagon Oracle
 
-**Live site:** https://&lt;owner&gt;.github.io/octagon-oracle/
+**Live site:** https://loya077.github.io/octagon-oracle/
 
 Octagon Oracle predicts UFC fight winners by blending the betting market with the owner's numerology and Chinese-astrology readings. It starts from the no-vig moneyline, then shifts each fight toward whoever the readings favor. A slider sets how far it shifts.
 

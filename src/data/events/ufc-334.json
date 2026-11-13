@@ -1,0 +1,410 @@
+{
+  "id": "ufc-334",
+  "name": "UFC 334",
+  "date": "2026-11-14",
+  "weekday": "Saturday",
+  "venue": "Madison Square Garden",
+  "city": "New York, NY",
+  "timezone": "ET",
+  "segments": [
+    {
+      "key": "main",
+      "name": "Main card",
+      "start": "9:00 PM ET"
+    },
+    {
+      "key": "prelims",
+      "name": "Prelims",
+      "start": "7:00 PM ET"
+    },
+    {
+      "key": "early",
+      "name": "Early prelims",
+      "start": "5:00 PM ET"
+    }
+  ],
+  "linesSource": "DraftKings, as of Nov 9, 2026",
+  "asOf": "Card and lines as of Nov 9–13, 2026",
+  "fights": [
+    {
+      "id": "ufc334-01",
+      "order": 1,
+      "segment": "main",
+      "division": "Heavyweight",
+      "rounds": 5,
+      "title": "Heavyweight title",
+      "a": {
+        "name": "Ciryl Gane",
+        "record": "14-2",
+        "ml": -225,
+        "reading": {
+          "bornDay": 3,
+          "lifePath": 8,
+          "pinnacle": 22,
+          "animal": "Horse"
+        }
+      },
+      "b": {
+        "name": "Josh Hokit",
+        "record": "10-0",
+        "ml": 185,
+        "reading": {
+          "bornDay": 3,
+          "lifePath": 4,
+          "pinnacle": 11,
+          "animal": "Ox"
+        }
+      }
+    },
+    {
+      "id": "ufc334-02",
+      "order": 2,
+      "segment": "main",
+      "division": "Women's bantamweight",
+      "rounds": 5,
+      "title": "Bantamweight title",
+      "a": {
+        "name": "Kayla Harrison",
+        "record": "19-1",
+        "ml": -192,
+        "reading": {
+          "bornDay": 2,
+          "lifePath": 1,
+          "pinnacle": 3,
+          "animal": "Horse"
+        }
+      },
+      "b": {
+        "name": "Amanda Nunes",
+        "record": "23-5",
+        "ml": 160,
+        "reading": {
+          "bornDay": 3,
+          "lifePath": 7,
+          "pinnacle": 11,
+          "animal": "Dragon"
+        }
+      }
+    },
+    {
+      "id": "ufc334-03",
+      "order": 3,
+      "segment": "main",
+      "division": "Middleweight",
+      "rounds": 3,
+      "a": {
+        "name": "Caio Borralho",
+        "record": "18-2",
+        "ml": -166,
+        "reading": {
+          "bornDay": 7,
+          "lifePath": 3,
+          "pinnacle": 11,
+          "animal": "Monkey"
+        }
+      },
+      "b": {
+        "name": "Yousri Belgaroui",
+        "record": "11-3",
+        "ml": 140,
+        "reading": {
+          "bornDay": 2,
+          "lifePath": 11,
+          "pinnacle": 5,
+          "animal": "Monkey"
+        }
+      }
+    },
+    {
+      "id": "ufc334-04",
+      "order": 4,
+      "segment": "main",
+      "division": "Welterweight",
+      "rounds": 3,
+      "a": {
+        "name": "Uroš Medić",
+        "record": "14-3",
+        "ml": -148,
+        "reading": {
+          "bornDay": 7,
+          "lifePath": 33,
+          "pinnacle": 11,
+          "animal": "Rooster"
+        }
+      },
+      "b": {
+        "name": "Kevin Holland",
+        "record": "29-15",
+        "ml": 124,
+        "reading": {
+          "bornDay": 5,
+          "lifePath": 1,
+          "pinnacle": 8,
+          "animal": "Monkey"
+        }
+      }
+    },
+    {
+      "id": "ufc334-05",
+      "order": 5,
+      "segment": "main",
+      "division": "Flyweight",
+      "rounds": 3,
+      "a": {
+        "name": "Bilal Hasan",
+        "record": "10-0",
+        "ml": -1100,
+        "reading": {
+          "bornDay": 7,
+          "lifePath": 8,
+          "pinnacle": 5,
+          "animal": "Snake"
+        }
+      },
+      "b": {
+        "name": "Luis Gurule",
+        "record": "11-4",
+        "ml": 700,
+        "reading": {
+          "bornDay": 7,
+          "lifePath": 4,
+          "pinnacle": 11,
+          "animal": "Rooster"
+        }
+      }
+    },
+    {
+      "id": "ufc334-06",
+      "order": 6,
+      "segment": "prelims",
+      "division": "Welterweight",
+      "rounds": 3,
+      "a": {
+        "name": "Stephen Thompson",
+        "record": "17-9-1",
+        "ml": -155,
+        "reading": {
+          "bornDay": 11,
+          "lifePath": 7,
+          "pinnacle": 5,
+          "animal": "Dog"
+        }
+      },
+      "b": {
+        "name": "Charles Radtke",
+        "record": "12-5",
+        "ml": 130,
+        "reading": {
+          "bornDay": 9,
+          "lifePath": 8,
+          "pinnacle": 1,
+          "animal": "Horse"
+        }
+      }
+    },
+    {
+      "id": "ufc334-07",
+      "order": 7,
+      "segment": "prelims",
+      "division": "Lightweight",
+      "rounds": 3,
+      "a": {
+        "name": "Chris Duncan",
+        "record": "15-3",
+        "ml": -155,
+        "reading": {
+          "bornDay": 1,
+          "lifePath": 1,
+          "pinnacle": 5,
+          "animal": "Rooster"
+        }
+      },
+      "b": {
+        "name": "Drew Dober",
+        "record": "29-15",
+        "ml": 130,
+        "reading": {
+          "bornDay": 1,
+          "lifePath": 1,
+          "pinnacle": 9,
+          "animal": "Dragon"
+        }
+      }
+    },
+    {
+      "id": "ufc334-08",
+      "order": 8,
+      "segment": "prelims",
+      "division": "Lightweight",
+      "rounds": 3,
+      "a": {
+        "name": "Terrance McKinney",
+        "record": "18-9",
+        "ml": -205,
+        "reading": {
+          "bornDay": 6,
+          "lifePath": 11,
+          "pinnacle": 11,
+          "animal": "Dog"
+        }
+      },
+      "b": {
+        "name": "Jim Miller",
+        "record": "39-19",
+        "ml": 170,
+        "reading": {
+          "bornDay": 3,
+          "lifePath": 5,
+          "pinnacle": 6,
+          "animal": "Pig"
+        }
+      }
+    },
+    {
+      "id": "ufc334-09",
+      "order": 9,
+      "segment": "prelims",
+      "division": "Middleweight",
+      "rounds": 3,
+      "a": {
+        "name": "Donte Johnson",
+        "record": "9-0",
+        "ml": -175,
+        "reading": {
+          "bornDay": 7,
+          "lifePath": 9,
+          "pinnacle": 8,
+          "animal": "Tiger"
+        }
+      },
+      "b": {
+        "name": "César Almeida",
+        "record": "7-3",
+        "ml": 145,
+        "reading": {
+          "bornDay": 3,
+          "lifePath": 1,
+          "pinnacle": 9,
+          "animal": "Dragon"
+        }
+      }
+    },
+    {
+      "id": "ufc334-10",
+      "order": 10,
+      "segment": "early",
+      "division": "Lightweight",
+      "rounds": 3,
+      "a": {
+        "name": "Melquizael Costa",
+        "record": "26-8",
+        "ml": -375,
+        "reading": {
+          "bornDay": 5,
+          "lifePath": 3,
+          "pinnacle": 3,
+          "animal": "Rat"
+        }
+      },
+      "b": {
+        "name": "Jared Gordon",
+        "record": "21-9",
+        "ml": 295,
+        "reading": {
+          "bornDay": 6,
+          "lifePath": 5,
+          "pinnacle": 5,
+          "animal": "Dragon"
+        }
+      }
+    },
+    {
+      "id": "ufc334-11",
+      "order": 11,
+      "segment": "early",
+      "division": "Women's bantamweight",
+      "rounds": 3,
+      "a": {
+        "name": "Bia Mesquita",
+        "record": "8-0",
+        "ml": -250,
+        "reading": {
+          "bornDay": 7,
+          "lifePath": 4,
+          "pinnacle": 9,
+          "animal": "Goat"
+        }
+      },
+      "b": {
+        "name": "Macy Chiasson",
+        "record": "11-6",
+        "ml": 205,
+        "reading": {
+          "bornDay": 9,
+          "lifePath": 9,
+          "pinnacle": 11,
+          "animal": "Goat"
+        }
+      }
+    },
+    {
+      "id": "ufc334-12",
+      "order": 12,
+      "segment": "early",
+      "division": "Bantamweight",
+      "rounds": 3,
+      "a": {
+        "name": "Juan Díaz",
+        "record": "16-1-1",
+        "ml": null,
+        "reading": {
+          "bornDay": 3,
+          "lifePath": 9,
+          "pinnacle": 3,
+          "animal": "Tiger"
+        }
+      },
+      "b": {
+        "name": "Alatengheili",
+        "record": "18-10-2",
+        "ml": null,
+        "reading": {
+          "bornDay": 5,
+          "lifePath": 1,
+          "pinnacle": 7,
+          "animal": "Goat"
+        }
+      },
+      "caveat": "One source lists Díaz's opponent as Adrián Yáñez (18-6-1) instead of Alatengheili."
+    },
+    {
+      "id": "ufc334-13",
+      "order": 13,
+      "segment": "early",
+      "division": "Lightweight",
+      "rounds": 3,
+      "a": {
+        "name": "Samuel Sanches",
+        "record": "11-1",
+        "ml": -120,
+        "reading": {
+          "bornDay": 1,
+          "lifePath": 7,
+          "pinnacle": 11,
+          "animal": "Horse"
+        }
+      },
+      "b": {
+        "name": "Evan Elder",
+        "record": "10-2",
+        "ml": 100,
+        "reading": {
+          "bornDay": 11,
+          "lifePath": 5,
+          "pinnacle": 1,
+          "animal": "Ox"
+        }
+      }
+    }
+  ]
+}

@@ -83,7 +83,7 @@ The animal order is Rat, Ox, Tiger, Cat, Dragon, Snake, Horse, Goat, Monkey, Roo
 1. Soulmates, +4: Rat–Ox.
 2. Enemies, −3: indices 6 apart (Rat–Horse, Ox–Goat, Tiger–Monkey, Cat–Rooster, Dragon–Dog, Snake–Pig).
 3. Trine, +3: different animals whose indices differ by a multiple of 4.
-4. Same sign, 0. Anything else is neutral, 0.
+4. Same sign, +4: the fighter's animal matches the year's animal. Anything else is neutral, 0.
 
 ### Fight-date context
 Fight life path = reduce(digitSum(date)), fight day = reduce(day of month), and fight animal = the lunar year's animal. UFC 334 (2026-11-14) gives **life path 8, day 5, Horse**.

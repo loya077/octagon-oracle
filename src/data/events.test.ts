@@ -21,16 +21,16 @@ describe('UFC 334 data', () => {
 describe('acceptance: verdict at default settings', () => {
   const expected: Array<[string, string, number, string]> = [
     // Pinnacle counts only on an exact match with the fight life path (8) or day (5);
-    // master pinnacles get no edge. Holland and Johnson (pinnacle 8) and Belgaroui and Gordon (5) score +9.
+    // master pinnacles get no edge. A fighter whose animal matches the year (Horse) gets +4.
     ['Bilal Hasan', 'Luis Gurule', 96, 'Lock'],
-    ['Ciryl Gane', 'Josh Hokit', 81, 'Lock'],
-    ['Evan Elder', 'Samuel Sanches', 76, 'Oracle upset'],
+    ['Ciryl Gane', 'Josh Hokit', 86, 'Lock'],
+    ['Kayla Harrison', 'Amanda Nunes', 80, 'Lock'],
     ['Yousri Belgaroui', 'Caio Borralho', 75, 'Oracle upset'],
     ['Terrance McKinney', 'Jim Miller', 73, 'Strong'],
     ['Donte Johnson', 'César Almeida', 73, 'Strong'],
-    ['Kayla Harrison', 'Amanda Nunes', 73, 'Strong'],
-    ['Stephen Thompson', 'Charles Radtke', 68, 'Strong'],
     ['Chris Duncan', 'Drew Dober', 68, 'Strong'],
+    ['Evan Elder', 'Samuel Sanches', 68, 'Oracle upset'],
+    ['Stephen Thompson', 'Charles Radtke', 59, 'Lean'],
     ['Bia Mesquita', 'Macy Chiasson', 59, 'Lean'],
     ['Melquizael Costa', 'Jared Gordon', 58, 'Lean'],
     ['Uroš Medić', 'Kevin Holland', 56, 'Lean'],

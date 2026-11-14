@@ -19,8 +19,9 @@ describe('animalRel', () => {
     expect(animalRel('Cat', 'Pig')[1]).toBe(3)
     expect(animalRel('Ox', 'Rooster')[1]).toBe(3)
   })
-  it('same sign and neutral are 0', () => {
-    expect(animalRel('Horse', 'Horse')).toEqual(['same sign', 0])
+  it('same sign is +4, neutral is 0', () => {
+    expect(animalRel('Horse', 'Horse')).toEqual(['same sign', 4])
+    expect(animalRel('Rat', 'Rat')).toEqual(['same sign', 4])
     expect(animalRel('Ox', 'Horse')).toEqual(['neutral', 0])
   })
   it('accepts Rabbit and Sheep', () => {

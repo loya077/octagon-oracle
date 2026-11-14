@@ -73,6 +73,6 @@ export function animalRel(aName: string, bName: string): Rel {
   if ((a === 'Rat' && b === 'Ox') || (a === 'Ox' && b === 'Rat')) return ['soulmates', 4]
   if (diff === 6) return ['enemies', -3]
   if (diff !== 0 && diff % 4 === 0) return ['trine', 3]
-  if (diff === 0) return ['same sign', 0]
+  if (diff === 0) return ['same sign', 4] // fighter's animal matches the year
   return ['neutral', 0]
 }

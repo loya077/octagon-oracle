@@ -25,7 +25,8 @@ export function HowItWorks() {
             <li><b>Soulmates, +4</b>: Rat and Ox.</li>
             <li><b>Enemies, −3</b>: six signs apart — Rat–Horse, Ox–Goat, Tiger–Monkey, Cat–Rooster, Dragon–Dog, Snake–Pig.</li>
             <li><b>Trine, +3</b>: Rat–Dragon–Monkey, Ox–Snake–Rooster, Tiger–Horse–Dog, Cat–Goat–Pig.</li>
-            <li>Same sign or anything else: <b>0</b>. Rabbit counts as Cat, Sheep as Goat.</li>
+            <li><b>Same sign, +4</b>: the fighter’s animal matches the year’s animal.</li>
+            <li>Anything else: <b>0</b>. Rabbit counts as Cat, Sheep as Goat.</li>
           </ol>
           <h3>Fight date</h3>
           <p>The fight date gets its own life path, day number and year animal. UFC 334 on 2026-11-14 is life path 8, day 5, year of the Horse.</p>

@@ -25,12 +25,13 @@ describe('scoreReading', () => {
     // pinnacle 22: no match with 8 or 5 → 0, 0 (pinnacle counts only on a match)
     // life path 8: vs 8 match +3×2, vs 5 friendly +2×2
     // born day 3: vs 8 neutral, vs 5 neutral; master: pinnacle gets no edge → 0
-    expect(s.rows.map((r) => r.points)).toEqual([0, 0, 6, 4, 0, 0, 0, 0])
+    // Horse fighter in a Horse year: same sign +4
+    expect(s.rows.map((r) => r.points)).toEqual([0, 0, 6, 4, 0, 0, 0, 4])
     expect(s.rows[0].note).toBe('22 vs 8: no match (counts only on a match)')
     expect(s.rows[6].note).toBe('none')
     expect(s.num).toBe(10)
-    expect(s.astro).toBe(0)
-    expect(s.total).toBeCloseTo((7.5 * 10) / 48 * 2, 10)
+    expect(s.astro).toBe(4)
+    expect(s.total).toBeCloseTo(2.5 * (4 / 4) + (7.5 * 10) / 48 * 2, 10)
   })
   it('pinnacle scores +9 for each exact match with the fight life path or day', () => {
     // Holland: pinnacle 8 matches fight life path 8

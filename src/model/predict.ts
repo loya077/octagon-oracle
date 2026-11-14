@@ -37,7 +37,8 @@ export interface Settings {
 export const DEFAULT_SETTINGS: Settings = { influence: 50, wAstro: 25, wNum: 75, masterEdge: 100 }
 
 export const SLOT_WEIGHTS = { pinnacle: 3, lifePath: 2, bornDay: 1 } as const
-export const MASTER_BONUS = { pinnacle: 6, lifePath: 8, bornDay: 6 } as const
+/** Master-number edge by slot. The pinnacle gets none. */
+export const MASTER_BONUS = { pinnacle: 0, lifePath: 8, bornDay: 6 } as const
 export const NUM_MAX = 48
 export const AST_MAX = 4
 
@@ -107,6 +108,19 @@ export function scoreReading(
   for (const slot of slots) {
     for (const [target, val] of [['fight life path', ctx.lifePath], ['fight day', ctx.day]] as const) {
       const v = r[slot]
+      if (slot === 'pinnacle') {
+        // The pinnacle counts only as an advantage, on an exact match with the
+        // fight life path or the fight day (+3 × weight each). Nothing else scores.
+        const hit = v === val
+        rows.push({
+          kind: 'numerology',
+          label: `${SLOT_LABELS[slot]} × ${target}`,
+          note: `${v} vs ${val}: ${hit ? 'match' : 'no match (counts only on a match)'}`,
+          rel: hit ? 'match' : 'neutral',
+          points: hit ? 3 * SLOT_WEIGHTS[slot] : 0,
+        })
+        continue
+      }
       const [label, pts] = numRel(v, val)
       rows.push({
         kind: 'numerology',
@@ -117,7 +131,7 @@ export function scoreReading(
       })
     }
   }
-  const masters = slots.filter((sl) => isMaster(r[sl]))
+  const masters = slots.filter((sl) => MASTER_BONUS[sl] > 0 && isMaster(r[sl]))
   const masterPts = round1(
     slots.reduce((acc, sl) => acc + (isMaster(r[sl]) ? MASTER_BONUS[sl] : 0), 0) * (s.masterEdge / 100),
   )

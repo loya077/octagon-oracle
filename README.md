@@ -90,8 +90,8 @@ Fight life path = reduce(digitSum(date)), fight day = reduce(day of month), and 
 
 ### Readings score (`predict.ts`)
 - Slot weights: pinnacle ×3, life path ×2, born day ×1.
-- Six pairing rows: each slot is checked against the fight life path and against the fight day, scoring numRel × slot weight.
-- One master-numbers row: (+6 for a master pinnacle, +8 for a master life path, +6 for a master born day) × masterEdge/100, rounded to 0.1.
+- Six pairing rows: each slot is checked against the fight life path and against the fight day. Life path and born day score numRel × slot weight. The pinnacle counts only as an advantage: +9 (3 × 3) for an exact match, 0 for anything else.
+- One master-numbers row: (+8 for a master life path, +6 for a master born day) × masterEdge/100, rounded to 0.1. A master pinnacle gets no edge.
 - One astrology row: animalRel(fighter animal, fight-year animal).
 - num = the sum of the 7 numerology rows; astro = the astrology row; NUM_MAX = 48; AST_MAX = 4.
 - **total = (wAstro/10) × (astro/AST_MAX) + (wNum/10) × (num/NUM_MAX) × 2**

@@ -31,8 +31,9 @@ export function HowItWorks() {
           <p>The fight date gets its own life path, day number and year animal. UFC 334 on 2026-11-14 is life path 8, day 5, year of the Horse.</p>
           <h3>Readings score</h3>
           <ul>
-            <li>Each of a fighter’s pinnacle, life path and born day is checked against the fight’s life path and the fight’s day: six rows, each worth the relationship points × the slot weight (pinnacle ×3, life path ×2, born day ×1).</li>
-            <li>A seventh <b>master numbers</b> row: +6 for a master pinnacle, +8 for a master life path, +6 for a master born day, scaled by the master-number edge slider and rounded to 0.1.</li>
+            <li>Each of a fighter’s life path and born day is checked against the fight’s life path and the fight’s day, worth the relationship points × the slot weight (life path ×2, born day ×1).</li>
+            <li>The <b>pinnacle</b> (×3) counts only as an advantage: +9 when it exactly matches the fight’s life path and +9 when it exactly matches the fight’s day. Any other pinnacle relationship scores 0.</li>
+            <li>A <b>master numbers</b> row: +8 for a master life path, +6 for a master born day, scaled by the master-number edge slider and rounded to 0.1. A master pinnacle gets no edge.</li>
             <li>One <b>astrology</b> row: the fighter’s animal against the fight year’s animal.</li>
             <li>Total = (astrology weight ÷ 10) × (astrology ÷ 4) + (numerology weight ÷ 10) × (numerology ÷ 48) × 2.</li>
             <li>A fighter missing any of the four values has no reading.</li>

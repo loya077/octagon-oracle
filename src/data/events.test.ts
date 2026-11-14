@@ -20,19 +20,21 @@ describe('UFC 334 data', () => {
 
 describe('acceptance: verdict at default settings', () => {
   const expected: Array<[string, string, number, string]> = [
-    ['Bilal Hasan', 'Luis Gurule', 93, 'Lock'],
-    ['Terrance McKinney', 'Jim Miller', 91, 'Lock'],
+    // Pinnacle counts only on an exact match with the fight life path (8) or day (5);
+    // master pinnacles get no edge. Holland and Johnson (pinnacle 8) and Belgaroui and Gordon (5) score +9.
+    ['Bilal Hasan', 'Luis Gurule', 96, 'Lock'],
     ['Ciryl Gane', 'Josh Hokit', 81, 'Lock'],
-    ['Donte Johnson', 'César Almeida', 78, 'Strong'],
-    ['Stephen Thompson', 'Charles Radtke', 74, 'Strong'],
-    ['Chris Duncan', 'Drew Dober', 74, 'Strong'],
-    ['Uroš Medić', 'Kevin Holland', 69, 'Strong'],
-    ['Yousri Belgaroui', 'Caio Borralho', 63, 'Oracle upset'],
-    ['Macy Chiasson', 'Bia Mesquita', 62, 'Oracle upset'],
-    ['Juan Díaz', 'Alatengheili', 62, 'Lean (no line)'],
-    ['Evan Elder', 'Samuel Sanches', 57, 'Oracle upset'],
-    ['Kayla Harrison', 'Amanda Nunes', 54, 'Toss-up'],
-    ['Melquizael Costa', 'Jared Gordon', 51, 'Toss-up'],
+    ['Evan Elder', 'Samuel Sanches', 76, 'Oracle upset'],
+    ['Yousri Belgaroui', 'Caio Borralho', 75, 'Oracle upset'],
+    ['Terrance McKinney', 'Jim Miller', 73, 'Strong'],
+    ['Donte Johnson', 'César Almeida', 73, 'Strong'],
+    ['Kayla Harrison', 'Amanda Nunes', 73, 'Strong'],
+    ['Stephen Thompson', 'Charles Radtke', 68, 'Strong'],
+    ['Chris Duncan', 'Drew Dober', 68, 'Strong'],
+    ['Bia Mesquita', 'Macy Chiasson', 59, 'Lean'],
+    ['Melquizael Costa', 'Jared Gordon', 58, 'Lean'],
+    ['Uroš Medić', 'Kevin Holland', 56, 'Lean'],
+    ['Juan Díaz', 'Alatengheili', 51, 'Toss-up (no line)'],
   ]
   const rows = buildVerdict(event.fights, event.date, DEFAULT_SETTINGS)
 

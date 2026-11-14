@@ -22,23 +22,40 @@ describe('scoreReading', () => {
   it('Gane: 8 rows and the expected totals', () => {
     const s = scoreReading({ bornDay: 3, lifePath: 8, pinnacle: 22, animal: 'Horse' }, ctx)!
     expect(s.rows).toHaveLength(8)
-    // pinnacle 22: vs 8 friendly(master) +2×3, vs 5 friendly(master) +2×3
+    // pinnacle 22: no match with 8 or 5 → 0, 0 (pinnacle counts only on a match)
     // life path 8: vs 8 match +3×2, vs 5 friendly +2×2
-    // born day 3: vs 8 neutral, vs 5 neutral; master: pinnacle +6
-    expect(s.rows.map((r) => r.points)).toEqual([6, 6, 6, 4, 0, 0, 6, 0])
-    expect(s.rows[0].note).toBe('22 vs 8: friendly (master)')
-    expect(s.num).toBe(28)
+    // born day 3: vs 8 neutral, vs 5 neutral; master: pinnacle gets no edge → 0
+    expect(s.rows.map((r) => r.points)).toEqual([0, 0, 6, 4, 0, 0, 0, 0])
+    expect(s.rows[0].note).toBe('22 vs 8: no match (counts only on a match)')
+    expect(s.rows[6].note).toBe('none')
+    expect(s.num).toBe(10)
     expect(s.astro).toBe(0)
-    expect(s.total).toBeCloseTo((7.5 * 28) / 48 * 2, 10)
+    expect(s.total).toBeCloseTo((7.5 * 10) / 48 * 2, 10)
+  })
+  it('pinnacle scores +9 for each exact match with the fight life path or day', () => {
+    // Holland: pinnacle 8 matches fight life path 8
+    const holland = scoreReading({ bornDay: 5, lifePath: 1, pinnacle: 8, animal: 'Monkey' }, ctx)!
+    expect(holland.rows[0].points).toBe(9)
+    expect(holland.rows[0].rel).toBe('match')
+    expect(holland.rows[1].points).toBe(0)
+    // Belgaroui: pinnacle 5 matches fight day 5
+    const belgaroui = scoreReading({ bornDay: 2, lifePath: 11, pinnacle: 5, animal: 'Monkey' }, ctx)!
+    expect(belgaroui.rows[0].points).toBe(0)
+    expect(belgaroui.rows[1].points).toBe(9)
+    // Enemy or friendly pinnacles score nothing: 4 vs 5 would be enemies, 2 vs 8 friendly
+    expect(scoreReading({ bornDay: 2, lifePath: 2, pinnacle: 4, animal: 'Ox' }, ctx)!.rows[1].points).toBe(0)
+    expect(scoreReading({ bornDay: 2, lifePath: 2, pinnacle: 2, animal: 'Ox' }, ctx)!.rows[0].points).toBe(0)
   })
   it('master edge scales the master row', () => {
     const r = { bornDay: 11, lifePath: 33, pinnacle: 22, animal: 'Ox' }
     const full = scoreReading(r, ctx)!
     const half = scoreReading(r, ctx, { ...DEFAULT_SETTINGS, masterEdge: 50 })!
-    expect(full.rows[6].points).toBe(20)
-    expect(half.rows[6].points).toBe(10)
+    // life path 33 (+8) + born day 11 (+6); the master pinnacle 22 adds nothing
+    expect(full.rows[6].points).toBe(14)
+    expect(full.rows[6].note).toBe('life path 33, born day 11')
+    expect(half.rows[6].points).toBe(7)
     const third = scoreReading(r, ctx, { ...DEFAULT_SETTINGS, masterEdge: 33 })!
-    expect(third.rows[6].points).toBe(6.6)
+    expect(third.rows[6].points).toBe(4.6)
   })
   it('missing values → null', () => {
     expect(scoreReading({ bornDay: 3, lifePath: null, pinnacle: 22, animal: 'Horse' }, ctx)).toBeNull()
